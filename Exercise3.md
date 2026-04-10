@@ -414,10 +414,6 @@
 
 이 실습에서는 VM 데이터 마이그레이션을 위한 Azure Storage Account를 생성하였습니다. Hyper-V 호스트(LabVM)를 Migration and Modernization 서비스에 등록하고, 마이그레이션을 위해 Azure Site Recovery를 사용하였습니다. Hyper-V 호스트에 Azure Site Recovery Provider를 배포하고 온프레미스 VM에서 Azure Migrate Server Migration 서비스로의 복제를 구성하였습니다. 복제된 VM의 고정 프라이빗 IP가 온프레미스 구성과 일치하도록 설정하였습니다. 마지막으로 UbuntuWAF, smarthotelweb1 및 smarthotelweb2 VM을 Azure로 성공적으로 마이그레이션하였습니다.
 
-하단 오른쪽의 **Next**를 클릭하여 다음 페이지로 이동하십시오.
-
-![](./images/NEXTPAGE5.png)
-
 ---
 
 **[← 이전: 실습 2 - 비즈니스 가치 및 ROI 정당성 평가](Exercise2.md)** | **[다음: 실습 4 - GitHub Copilot을 활용한 애플리케이션 모더나이제이션 →](Exercise4.md)**

@@ -54,10 +54,6 @@
 
 이 연습에서는 Azure Migrate에서 마이그레이션 평가를 생성 및 구성하고, Log Analytics 작업 영역을 만들어 Windows 및 Linux 온프레미스 머신에 Azure Monitoring Agent 및 Dependency Agent를 배포하여 종속성 시각화 기능을 구성했습니다.
 
-오른쪽 하단의 **Next**를 클릭하여 다음 페이지로 이동합니다.
-
-![](./images/NEXTPAGE4.png)
-
 ---
 
 **[← 이전: 실습 1 - 에이전트 기반 검색 및 평가](Exercise1.md)** | **[다음: 실습 3 - 엔터프라이즈 랜딩 존 및 마이그레이션 →](Exercise3.md)**

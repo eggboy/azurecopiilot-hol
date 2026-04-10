@@ -221,10 +221,6 @@
 
 이 실습에서는 GitHub Copilot이 생성한 GitHub Actions 워크플로를 검토하고 Azure App Service에 필요한 배포 설정을 구성했습니다. 게시 프로필 다운로드를 활성화하고, 게시 프로필을 GitHub 리포지토리 시크릿으로 추가했으며, 올바른 App Service 이름으로 워크플로를 업데이트하고, 필요한 시작 명령 및 애플리케이션 설정을 구성했습니다. 마지막으로 CI/CD 파이프라인을 트리거하고 배포된 SmartHotel 애플리케이션을 검증했습니다.
 
-오른쪽 하단의 **Next**를 클릭하여 다음 페이지로 이동합니다.
-
-![](./images/NEXTPAGE6.png)
-
 ---
 
 **[← 이전: 실습 4 - GitHub Copilot을 활용한 애플리케이션 모더나이제이션](Exercise4.md)** | **[다음: 실습 6 - 관찰 가능성, 보안 및 최적화 →](Exercise6.md)**
