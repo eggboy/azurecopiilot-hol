@@ -1,0 +1,4 @@
+[   59066ms] [ERROR] Error with Permissions-Policy header: Parse of permissions policy failed because of errors reported by structured header parser. @ :0
+[   59071ms] [ERROR] Failed to load resource: net::ERR_UNKNOWN_URL_SCHEME @ javascript:void(0):0
+[   59093ms] ReferenceError: exports is not defined
+    at https://experience.cloudlabs.ai/scripts.badb1635d74448953ff4.js:1:172158

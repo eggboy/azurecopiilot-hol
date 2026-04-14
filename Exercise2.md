@@ -41,7 +41,7 @@
     ![](./images/E2T1S6.png)
     ![](./images/E2T1S6a.png)
     
-7. 프롬프트에 **Using same Management group & subscription create PLZ code.**를 입력하고 Copilot의 응답을 검토합니다.
+7. 프롬프트에 **Create the PLZ ensuring that only a single default subscription is used—the same subscription where the Azure Migrate project is created. Additionally, use the same Management Group for all resources. The PLZ deployment must be restricted to and operate entirely within this single subscription.**를 입력하고 Copilot의 응답을 검토합니다.
 
     ![](./images/E2T1S7.png)
 

@@ -1,0 +1,441 @@
+- generic [ref=e4]:
+  - banner [ref=e6]:
+    - link "Microsoft Logo" [ref=e8] [cursor=pointer]:
+      - /url: javascript:void(0)
+      - img "Microsoft Logo" [ref=e9]
+    - generic [ref=e10]: "|"
+    - generic [ref=e11]: Azure copilot assisted migration
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic "change vm 100% selected" [ref=e14]:
+          - button "CloudLabs logo" [ref=e15] [cursor=pointer]:
+            - img "CloudLabs logo" [ref=e16]
+        - text: 
+      - generic "change Language English selected" [ref=e18]:
+        - button "en" [ref=e19] [cursor=pointer]:
+          - option [ref=e20]: 
+          - text: en
+  - generic [ref=e21]:
+    - generic [ref=e24]:
+      - heading "Azure Copilot assisted Migration" [level=1] [ref=e25]
+      - 'heading "Overall Estimated Duration: 8 Hours" [level=2] [ref=e26]'
+      - heading "Overview" [level=2] [ref=e27]
+      - paragraph [ref=e28]: In this hands-on lab, you will migrate and modernize workloads to Azure with help of Azure Copilot. You will start by evaluating and migrating Windows and SQL Server workloads using Azure Migrate and Azure Site Recovery. Next, you will replicate and migrate a Red Hat VM and OSS DB workloads, enable Entra ID-based authentication, and connect to Azure Automanage. Finally, you will manage a Windows machine with Azure Arc, using Azure Site Recovery for disaster recovery, including test failovers and failovers to Azure VMs.
+      - heading "Key Features of Infrastructure Migration to Azure" [level=3] [ref=e29]
+      - list [ref=e30]:
+        - listitem [ref=e31]:
+          - paragraph [ref=e32]:
+            - strong [ref=e33]: "Azure Copilot:"
+            - text: Discover servers, create risk Assessment, VM assessment, cost estimates & get IAC terraform code for Landing Zone deployemnt
+        - listitem [ref=e34]:
+          - paragraph [ref=e35]:
+            - strong [ref=e36]: "Seamless Workload Migration:"
+            - text: Migrate Windows, SQL Server, Linux, and open-source database workloads using Azure Migrate and Azure Site Recovery (ASR). This ensures efficient and secure movement of applications and data from on-premises or other clouds to Azure.
+        - listitem [ref=e37]:
+          - paragraph [ref=e38]:
+            - strong [ref=e39]: "Comprehensive Pre-Migration Setup:"
+            - text: Set up your Azure environment with appropriate networking, resource groups, and migration tools. Leverage built-in guidance to ensure your infrastructure is ready for server migration and modernization.
+        - listitem [ref=e40]:
+          - paragraph [ref=e41]:
+            - strong [ref=e42]: "Holistic Application and Data Migration:"
+            - text: "Use Azure Migrate: Server Migration and tools like the Azure Hybrid Benefit to transition apps and databases with minimal downtime. This includes end-to-end support for migrating application configurations, databases, and dependencies."
+        - listitem [ref=e43]:
+          - paragraph [ref=e44]:
+            - strong [ref=e45]: "Optimization of Migrated Workloads:"
+            - text: Post-migration, optimize workloads for performance, cost, and security. Azure tools identify inefficiencies and enable scaling, resource rightsizing, and implementation of best practices across all stacks.
+        - listitem [ref=e46]:
+          - paragraph [ref=e47]:
+            - strong [ref=e48]: "Modernization of Linux and OSS Databases:"
+            - text: Leverage Azure's tailored solutions to modernize Linux workloads and open-source databases. Azure ensures compatibility and provides support for scaling and optimizing these environments.
+        - listitem [ref=e49]:
+          - paragraph [ref=e50]:
+            - strong [ref=e51]: "Hybrid Cloud Enablement with Azure Arc:"
+            - text: Extend Azure management capabilities to on-premises servers using Azure Arc-enabled server. This enables centralized monitoring, policy enforcement, and management for hybrid environments.
+        - listitem [ref=e52]:
+          - paragraph [ref=e53]:
+            - strong [ref=e54]: "Advanced Disaster Recovery and Failover:"
+            - text: Configure Azure Site Recovery (ASR) to protect on-premises infrastructure. Perform test failovers and failover operations to Azure Cloud, ensuring business continuity in case of disasters.
+        - listitem [ref=e55]:
+          - paragraph [ref=e56]:
+            - strong [ref=e57]: "Integrated Security and Monitoring:"
+            - text: Enable Microsoft Defender for Cloud, Microsoft Sentinel, and Azure Monitor to safeguard workloads post-migration. Integrate with Log Analytics for real-time insights and threat detection across your environment.
+        - listitem [ref=e58]:
+          - paragraph [ref=e59]:
+            - strong [ref=e60]: "Business Case Analysis for Strategic Insights:"
+            - text: Conduct business case analysis to evaluate the financial and operational benefits of migration. Utilize Azure's reporting tools to assess cost savings, performance improvements, and ROI.
+        - listitem [ref=e61]:
+          - paragraph [ref=e62]:
+            - strong [ref=e63]: "Unified Management and Automation:"
+            - text: Use Azure's centralized platform to manage all migrated workloads, automate processes, and apply consistent governance, security, and compliance across your infrastructure.
+      - heading "Hands-on Labs Scenario" [level=2] [ref=e64]
+      - paragraph [ref=e65]: The following labs provide you with a quick and easy way to get started with Azure Migrate through on-premises environments that do not require any complex setup or installations.
+      - paragraph [ref=e66]: For the purposes of these Hands-on Labs (HOLs), let’s consider that SmartHotel is a large hotel company.
+      - paragraph [ref=e67]: Their IT systems run Windows, Linux, SQL Servers, and MySQL across on-premises data centers, distribution centers, and multiple public clouds. This poses operational challenges for SmartHotel. They’d like a consistent way to govern and operate across these disparate environments, ensure security across the entire organization, and enable innovation and developer agility, all while meeting regulatory and compliance requirements and being able to leverage the latest innovations of database technologies.
+      - heading "Objective" [level=2] [ref=e68]
+      - list [ref=e69]:
+        - listitem [ref=e70]:
+          - paragraph [ref=e71]:
+            - strong [ref=e72]: "Evaluate and Plan Migration:"
+            - text: Assess your current environment using Azure Migrate, create migration assessments, and configure dependency visualization to ensure a smooth transition.
+        - listitem [ref=e73]:
+          - paragraph [ref=e74]:
+            - strong [ref=e75]: "Set Up Azure Environment:"
+            - text: Prepare Azure for migration by creating storage accounts, registering Hyper-V hosts, enabling replication, and configuring networking.
+        - listitem [ref=e76]:
+          - paragraph [ref=e77]:
+            - strong [ref=e78]: "Migrate Workloads:"
+            - text: Use Azure Migrate and Azure Site Recovery to migrate Windows, SQL Server, Linux, and OSS DB workloads, ensuring minimal downtime and leveraging Azure's scalability.
+        - listitem [ref=e79]:
+          - paragraph [ref=e80]:
+            - strong [ref=e81]: "Optimize Workloads:"
+            - text: Enhance the performance and resilience of migrated workloads using VM Scale Sets, Azure Automanage, and Azure Active Directory SSH Login for Linux.
+        - listitem [ref=e82]:
+          - paragraph [ref=e83]:
+            - strong [ref=e84]: "Disaster Recovery and Security:"
+            - text: Implement disaster recovery plans with Azure Site Recovery, conduct test failovers, and enable failovers to Azure VMs. Enhance security with Microsoft Defender for Cloud, Microsoft Sentinel, and Azure Monitor.
+        - listitem [ref=e85]:
+          - paragraph [ref=e86]:
+            - strong [ref=e87]: "Business Case Analysis:"
+            - text: Perform business case analysis to ensure compliance and optimize resource management for Azure Services.
+      - heading "Pre-requisites" [level=2] [ref=e88]
+      - list [ref=e89]:
+        - listitem [ref=e90]:
+          - paragraph [ref=e91]:
+            - strong [ref=e92]: "Access to Azure Environment:"
+            - text: An active Azure subscription with necessary permissions to deploy and configure resources, including enabling Azure Migrate and Azure Site Recovery (ASR).
+        - listitem [ref=e93]:
+          - paragraph [ref=e94]:
+            - strong [ref=e95]: "Familiarity with Azure Services and Migration Tools:"
+            - text: Basic understanding of Azure concepts, resource management, and migration tools like Azure Migrate, Azure Hybrid Benefit, and ASR to ensure seamless migration.
+        - listitem [ref=e96]:
+          - paragraph [ref=e97]:
+            - strong [ref=e98]: "Technical Environment Preparation:"
+            - text: Prepared on-premises environment with necessary agents installed, server discovery enabled, and application compatibility assessed for migration readiness.
+      - heading "Architecture" [level=2] [ref=e99]
+      - paragraph [ref=e100]: The architecture diagram outlines a series of labs focused on migrating workloads to Azure, configuring Azure services, and leveraging Microsoft tools for optimization and monitoring. The labs begin with migrating Windows, SQL Server, Linux, and OSS database workloads, setting up environments for migration, and utilizing tools like Azure Migrate and the Azure Hybrid Benefit to transition applications and data. Users then onboard on-premises servers to Azure Arc-enabled, configure Azure Site Recovery (ASR) for failover, and migrate infrastructure to Azure. The sequence continues with enabling Microsoft Defender for Cloud, Sentinel, and Azure Monitor while setting up log analytics for security and monitoring, culminating in a business case analysis capability, offering a comprehensive understanding of Azure migration, optimization, and security operations.
+      - heading "Architecture Diagram" [level=2] [ref=e101]
+      - paragraph [ref=e102]:
+        - img "A slide shows the on-premises SmartHotel application architecture." [ref=e103] [cursor=pointer]
+      - heading "Explanation of Components" [level=2] [ref=e104]
+      - list [ref=e105]:
+        - listitem [ref=e106]:
+          - paragraph [ref=e107]:
+            - strong [ref=e108]: "Azure Copilot:"
+            - text: Azure Copilot is an AI-powered assistant in Azure that helps manage resources, automate tasks, generate configurations, troubleshoot issues, and provide insights using natural language, improving productivity and operational efficiency.
+        - listitem [ref=e109]:
+          - paragraph [ref=e110]:
+            - strong [ref=e111]: "Azure Migrate:"
+            - text: A centralized hub for discovering, assessing, and migrating on-premises servers, applications, and databases to Azure. It simplifies migration planning and execution by providing tools for workload analysis, cost estimation, and seamless migration.
+        - listitem [ref=e112]:
+          - paragraph [ref=e113]:
+            - strong [ref=e114]: "Azure Arc:"
+            - text: Enables on-premises servers and other non-Azure resources to integrate with Azure's management tools, allowing organizations to manage, secure, and govern resources across hybrid environments through a unified Azure interface.
+        - listitem [ref=e115]:
+          - paragraph [ref=e116]:
+            - strong [ref=e117]: "Azure Site Recovery (ASR):"
+            - text: A disaster recovery solution that replicates on-premises servers to Azure, enabling failover and failback of workloads to ensure business continuity during outages or system failures.
+        - listitem [ref=e118]:
+          - paragraph [ref=e119]:
+            - strong [ref=e120]: "Microsoft Defender for Cloud:"
+            - text: A security management tool that provides visibility and protection for workloads running in Azure, on-premises, and other cloud platforms. It helps detect threats, manage security posture, and ensure compliance.
+        - listitem [ref=e121]:
+          - paragraph [ref=e122]:
+            - strong [ref=e123]: "Microsoft Sentinel:"
+            - text: A cloud-native security information and event management (SIEM) and security orchestration, automated response (SOAR) solution that aggregates security data, detects threats, and enables incident response through playbooks and analytics.
+        - listitem [ref=e124]:
+          - paragraph [ref=e125]:
+            - strong [ref=e126]: "Azure Monitor:"
+            - text: A service that collects, analyzes, and acts on telemetry data from Azure resources, on-premises environments, and other clouds, providing insights into the performance and health of applications and infrastructure.
+        - listitem [ref=e127]:
+          - paragraph [ref=e128]:
+            - strong [ref=e129]: "Log Analytics:"
+            - text: A tool within Azure Monitor that enables querying and analyzing log data from Azure resources to gain insights, troubleshoot issues, and improve operational efficiency.
+        - listitem [ref=e130]:
+          - paragraph [ref=e131]:
+            - strong [ref=e132]: "Azure Hybrid Benefit:"
+            - text: A licensing benefit that helps organizations reduce costs when migrating workloads to Azure by allowing them to use existing on-premises licenses for Windows Server and SQL Server in the cloud.
+        - listitem [ref=e133]:
+          - paragraph [ref=e134]:
+            - strong [ref=e135]: "Business Case Analysis:"
+            - text: A read-only capability designed to help organizations assess the financial and operational benefits of migrating workloads to Azure, providing insights into cost optimization and ROI.
+      - heading "Getting Started with the Lab" [level=2] [ref=e136]
+      - paragraph [ref=e137]: Welcome to Infrastructure Migration. Ensure you have access to all required tools, accounts, and carefully read each task and follow the steps in sequence. Refer to the screenshots and tips provided for guidance throughout the lab.
+      - heading "Accessing Your Lab Environment" [level=2] [ref=e138]
+      - paragraph [ref=e139]:
+        - text: Once you're ready to dive in, your virtual machine and
+        - strong [ref=e140]: Guide
+        - text: will be right at your fingertips within your web browser.
+      - paragraph [ref=e141]:
+        - img [ref=e323] [cursor=pointer]
+      - heading "Virtual Machine & Lab Guide" [level=2] [ref=e142]
+      - paragraph [ref=e143]: Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+      - heading "Exploring Your Lab Resources" [level=2] [ref=e144]
+      - paragraph [ref=e145]:
+        - text: To get a better understanding of your lab resources and credentials, navigate to the
+        - strong [ref=e146]: Environment Details
+        - text: tab.
+      - paragraph [ref=e147]:
+        - img [ref=e324] [cursor=pointer]
+      - heading "Utilizing the Split Window Feature" [level=2] [ref=e148]
+      - paragraph [ref=e149]:
+        - text: For convenience, you can open the lab guide in a separate window by selecting the
+        - strong [ref=e150]: Split Window
+        - text: button from the Top right corner.
+      - paragraph [ref=e151]:
+        - img [ref=e325] [cursor=pointer]
+      - heading "Managing Your Virtual Machine" [level=2] [ref=e152]
+      - paragraph [ref=e153]:
+        - text: Feel free to
+        - strong [ref=e154]: Start, Stop, or Restart (2)
+        - text: your virtual machine as needed from the
+        - strong [ref=e155]: Resources (1)
+        - text: tab. Your experience is in your hands!
+      - paragraph [ref=e156]:
+        - img [ref=e326] [cursor=pointer]
+      - heading "Lab Guide Zoom In/Zoom Out" [level=2] [ref=e157]
+      - paragraph [ref=e158]:
+        - text: To adjust the zoom level for the environment page, click the
+        - strong [ref=e159]: "A↕ : 100%"
+        - text: icon located next to the timer in the lab environment.
+      - paragraph [ref=e160]:
+        - img [ref=e327] [cursor=pointer]
+      - heading "Let's Get Started with Azure Portal" [level=2] [ref=e161]:
+        - strong [ref=e162]: Let's Get Started with Azure Portal
+      - list [ref=e163]:
+        - listitem [ref=e164]:
+          - paragraph [ref=e165]:
+            - text: On your virtual machine, click on the
+            - strong [ref=e166]: Azure Portal
+            - text: "icon as shown below:"
+          - paragraph [ref=e167]:
+            - img [ref=e328] [cursor=pointer]
+        - listitem [ref=e168]:
+          - paragraph [ref=e169]:
+            - text: You'll see the
+            - strong [ref=e170]: Sign into Microsoft Azure
+            - text: "tab. Here, enter your credentials:"
+          - list [ref=e171]:
+            - listitem [ref=e172]:
+              - paragraph [ref=e173]:
+                - strong [ref=e174]: "Email/Username:"
+              - paragraph [ref=e175]:
+                - img [ref=e329] [cursor=pointer]
+        - listitem [ref=e176]:
+          - paragraph [ref=e177]: "Next, provide your password:"
+          - list [ref=e178]:
+            - listitem [ref=e179]:
+              - paragraph [ref=e180]:
+                - strong [ref=e181]: "Password:"
+              - paragraph [ref=e182]:
+                - img [ref=e330] [cursor=pointer]
+        - listitem [ref=e183]:
+          - paragraph [ref=e184]:
+            - text: If you see the pop-up
+            - strong [ref=e185]: Stay Signed in?
+            - text: ", click"
+            - strong [ref=e186]: "No"
+            - text: .
+          - paragraph [ref=e187]:
+            - img [ref=e331] [cursor=pointer]
+        - listitem [ref=e188]:
+          - paragraph [ref=e189]:
+            - text: If a
+            - strong [ref=e190]: Welcome to Microsoft Azure
+            - text: pop-up window appears, click
+            - strong [ref=e191]: Cancel
+            - text: to skip the tour.
+          - paragraph [ref=e192]:
+            - img [ref=e332] [cursor=pointer]
+        - listitem [ref=e193]:
+          - paragraph [ref=e194]:
+            - text: From the
+            - strong [ref=e195]: Azure Portal
+            - text: Dashboard, under the Navigate section, click
+            - strong [ref=e196]: Resource groups
+            - text: to view all the resource groups.
+          - paragraph [ref=e197]:
+            - img [ref=e333] [cursor=pointer]
+        - listitem [ref=e198]:
+          - paragraph [ref=e199]:
+            - text: On the
+            - strong [ref=e200]: Resource groups
+            - text: page in the Azure portal, confirm you have all resource groups present as shown below.
+          - paragraph [ref=e201]:
+            - img [ref=e334] [cursor=pointer]
+      - heading "Let's Get Started with GitHub Portal" [level=2] [ref=e202]:
+        - strong [ref=e203]: Let's Get Started with GitHub Portal
+      - list [ref=e204]:
+        - listitem [ref=e205]:
+          - paragraph [ref=e206]:
+            - text: Open a new Tab in browser Open the
+            - strong [ref=e207]: GitHub login
+            - text: page by copying the URL below and pasting it into your browser’s address bar:.
+          - code [ref=e209]: https://github.com/login
+          - button "Click to Copy" [ref=e335] [cursor=pointer]: 
+        - listitem [ref=e210]:
+          - paragraph [ref=e211]:
+            - text: On the
+            - strong [ref=e212]: Sign in to GitHub
+            - text: tab, enter the provided
+            - strong [ref=e213]: GitHub username
+            - strong [ref=e214]: (1)
+            - text: in the input field, and click on
+            - strong [ref=e215]: Sign in with your identity provider
+            - text: to continue
+            - strong [ref=e216]: (2)
+            - text: .
+          - list [ref=e217]:
+            - listitem [ref=e218]:
+              - paragraph [ref=e219]:
+                - strong [ref=e220]: "Username:"
+              - paragraph [ref=e221]:
+                - img [ref=e336] [cursor=pointer]
+        - listitem [ref=e222]:
+          - paragraph [ref=e223]:
+            - text: Click on
+            - strong [ref=e224]: Continue
+            - text: on the
+            - strong [ref=e225]: Single sign-on to CloudLabs Organizations
+            - text: page to proceed.
+          - paragraph [ref=e226]:
+            - img [ref=e337] [cursor=pointer]
+        - listitem [ref=e227]:
+          - paragraph [ref=e228]:
+            - text: You'll see the
+            - strong [ref=e229]: Sign in
+            - text: tab. Here, enter the following email/username, and click on
+            - strong [ref=e230]: Next (2)
+            - text: ":"
+          - list [ref=e231]:
+            - listitem [ref=e232]:
+              - paragraph [ref=e233]:
+                - strong [ref=e234]: "Email/Username: (1)"
+              - paragraph [ref=e235]:
+                - img "Enter Your Username" [ref=e338] [cursor=pointer]
+        - listitem [ref=e236]:
+          - paragraph [ref=e237]:
+            - text: Next, provide your password and click on
+            - strong [ref=e238]: Sign in (2)
+          - list [ref=e239]:
+            - listitem [ref=e240]:
+              - paragraph [ref=e241]:
+                - strong [ref=e242]: "Temporary Access Pass: (1)"
+              - paragraph [ref=e243]:
+                - img "Enter Your Password" [ref=e339] [cursor=pointer]
+        - listitem [ref=e244]:
+          - paragraph [ref=e245]:
+            - text: On the
+            - strong [ref=e246]: Permission requested by
+            - text: pop-up, click on
+            - strong [ref=e247]: Accept
+            - text: .
+          - paragraph [ref=e248]:
+            - img "Enter Your Password" [ref=e340] [cursor=pointer]
+        - listitem [ref=e249]:
+          - paragraph [ref=e250]:
+            - text: On the
+            - strong [ref=e251]: Stay Signed in?
+            - text: pop-up, click on No.
+          - paragraph [ref=e252]:
+            - img [ref=e341] [cursor=pointer]
+        - listitem [ref=e253]:
+          - paragraph [ref=e254]:
+            - text: You are now successfully logged in to
+            - strong [ref=e255]: GitHub
+            - text: and have been redirected to the
+            - strong [ref=e256]: GitHub homepage
+            - text: .
+          - paragraph [ref=e257]:
+            - img [ref=e342] [cursor=pointer]
+      - heading "Support Contact" [level=2] [ref=e258]
+      - paragraph [ref=e259]: The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+      - paragraph [ref=e260]: "Learner Support Contacts:"
+      - list [ref=e261]:
+        - listitem [ref=e262]:
+          - text: "Email Support:"
+          - link "cloudlabs-support@spektrasystems.com" [ref=e263] [cursor=pointer]:
+            - /url: javascript:void(0)
+        - listitem [ref=e264]:
+          - text: "Live Chat Support:"
+          - link "https://cloudlabs.ai/labs-support" [ref=e265] [cursor=pointer]:
+            - /url: https://cloudlabs.ai/labs-support
+      - paragraph [ref=e266]:
+        - text: Now, click on
+        - strong [ref=e267]: Next
+        - text: from the lower right corner to move on to the next page.
+      - paragraph [ref=e268]:
+        - img [ref=e343] [cursor=pointer]
+      - heading "Happy Learning!!" [level=2] [ref=e269]
+    - list "Pagination" [ref=e272]:
+      - listitem [ref=e273]:
+        - text: «
+        - generic [ref=e274]:
+          - text: Previous
+          - generic [ref=e275]: page
+      - listitem [ref=e276]:
+        - generic [ref=e277]: You're on page
+        - text: "1"
+      - listitem [ref=e278]:
+        - generic [ref=e279] [cursor=pointer]:
+          - generic [ref=e280]: page
+          - text: "2"
+      - listitem [ref=e281]:
+        - generic [ref=e282] [cursor=pointer]:
+          - generic [ref=e283]: page
+          - text: "3"
+      - listitem [ref=e284]:
+        - generic [ref=e285] [cursor=pointer]:
+          - generic [ref=e286]: page
+          - text: "4"
+      - listitem [ref=e287]:
+        - generic [ref=e288] [cursor=pointer]:
+          - generic [ref=e289]: page
+          - text: "5"
+      - listitem [ref=e290]:
+        - generic [ref=e291] [cursor=pointer]:
+          - generic [ref=e292]: page
+          - text: "6"
+      - listitem [ref=e293]:
+        - generic [ref=e294] [cursor=pointer]:
+          - generic [ref=e295]: page
+          - text: "7"
+      - listitem [ref=e296]:
+        - generic "Next page" [ref=e297] [cursor=pointer]:
+          - text: Next
+          - generic [ref=e298]: page
+          - text: »
+    - button "scroll Top" [ref=e299] [cursor=pointer]:
+      - generic [ref=e300]: 
+  - contentinfo "footer" [ref=e302]:
+    - generic [ref=e303]:
+      - generic [ref=e305]:
+        - paragraph [ref=e306]: 2026 © Spektra Systems LLC. All Rights Reserved
+        - paragraph [ref=e307]:
+          - link "open in new tab PRIVACY POLICY" [ref=e308] [cursor=pointer]:
+            - /url: https://cloudlabs.ai/privacy-policy/
+            - text: Privacy Policy
+          - generic [ref=e309]: "|"
+        - paragraph [ref=e310]:
+          - link "open in new tab TERMS OF SERVICE" [ref=e311] [cursor=pointer]:
+            - /url: https://cloudlabs.ai/terms-of-use/
+            - text: Terms of Service
+      - generic [ref=e313]:
+        - paragraph [ref=e314]:
+          - text: Powered by
+          - link "open in new tab CloudLabs" [ref=e315] [cursor=pointer]:
+            - /url: https://cloudlabs.ai/
+            - text: CloudLabs
+          - text: "|"
+        - paragraph [ref=e316]:
+          - generic [ref=e317]: 
+          - text: "Sales Email:"
+          - link "Mail to info@cloudlabs.ai" [ref=e318] [cursor=pointer]:
+            - /url: mailto:info@cloudlabs.ai
+            - text: info@cloudlabs.ai
+          - text: "|"
+        - paragraph [ref=e319]:
+          - generic [ref=e320]: 
+          - generic [ref=e321]: "Support Email:"
+          - link "Mail to cloudlabs-support@spektrasystems.com" [ref=e322] [cursor=pointer]:
+            - /url: mailto:cloudlabs-support@spektrasystems.com
+            - text: cloudlabs-support@spektrasystems.com

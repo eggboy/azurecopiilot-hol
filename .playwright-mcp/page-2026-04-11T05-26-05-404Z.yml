@@ -1,0 +1,524 @@
+- generic [ref=e4]:
+  - banner [ref=e6]:
+    - link "Microsoft Logo" [ref=e8] [cursor=pointer]:
+      - /url: javascript:void(0)
+      - img "Microsoft Logo" [ref=e9]
+    - generic [ref=e10]: "|"
+    - generic [ref=e11]: Azure copilot assisted migration
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic "change vm 100% selected" [ref=e14]:
+          - button "CloudLabs logo" [ref=e15] [cursor=pointer]:
+            - img "CloudLabs logo" [ref=e16]
+        - text: 
+      - generic "change Language English selected" [ref=e18]:
+        - button "en" [ref=e19] [cursor=pointer]:
+          - option [ref=e20]: 
+          - text: en
+  - generic [ref=e21]:
+    - generic [ref=e2076]:
+      - 'heading "Exercise 4: Application Modernization with GitHub Copilot modernization" [level=1] [ref=e2077]'
+      - paragraph [ref=e2078]: This document serves as a comprehensive workshop guide that will walk you through the process of migrating a Java application to Azure using GitHub Copilot modernization. The exercise covers assessment, Java/framework upgrades, migration to Azure services, containerization, and deployment.
+      - paragraph [ref=e2079]:
+        - strong [ref=e2080]: "What the modernization Process Will Do:"
+        - text: The modernization will transform your application from the outdated technologies to a modern Azure-native solution. This includes upgrading from Java 8 to Java 21, migrating from Spring Boot 2.x to 3.x, replacing AWS S3 with Azure Blob Storage, switching from RabbitMQ to Azure Service Bus, migrating to Azure Database for PostgreSQL, implementing managed identity authentication, adding health checks, containerizing the applications, and preparing them for cloud deployment with proper monitoring.
+      - heading "Table of Contents" [level=2] [ref=e2081]
+      - list [ref=e2082]:
+        - listitem [ref=e2083]:
+          - link "Overview" [ref=e2084] [cursor=pointer]:
+            - /url: javascript:void(0)
+        - listitem [ref=e2085]:
+          - link "Current Architecture" [ref=e2086] [cursor=pointer]:
+            - /url: javascript:void(0)
+        - listitem [ref=e2087]:
+          - link "Run Locally" [ref=e2088] [cursor=pointer]:
+            - /url: javascript:void(0)
+        - listitem [ref=e2089]:
+          - link "App Modernization" [ref=e2090] [cursor=pointer]:
+            - /url: javascript:void(0)
+          - list [ref=e2091]:
+            - listitem [ref=e2092]:
+              - link "Install GitHub Copilot modernization" [ref=e2093] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e2094]:
+              - link "Assess Your Java Application" [ref=e2095] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e2096]:
+              - link "Upgrade Runtime & Frameworks" [ref=e2097] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e2098]:
+              - link "Migrate to Azure Database for PostgreSQL Flexible Server using Predefined Tasks" [ref=e2099] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e2100]:
+              - link "Migrate to Azure Blob Storage using Predefined Tasks" [ref=e2101] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e2102]:
+              - link "Migrate to Azure Service Bus using Predefined Tasks" [ref=e2103] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e2104]:
+              - link "Expose health endpoints using Custom Skills" [ref=e2105] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e2106]:
+              - link "Containerize Applications" [ref=e2107] [cursor=pointer]:
+                - /url: javascript:void(0)
+            - listitem [ref=e2108]:
+              - link "Deploy to Azure" [ref=e2109] [cursor=pointer]:
+                - /url: javascript:void(0)
+      - heading "Overview" [level=2] [ref=e2110]
+      - paragraph [ref=e2111]:
+        - text: In this exercise, you will use the
+        - strong [ref=e2112]: GitHub Copilot modernization
+        - text: extension to assess, upgrade, migrate, and finally deploy the project to Azure.
+      - heading "App Modernization" [level=2] [ref=e2113]
+      - paragraph [ref=e2114]:
+        - text: The following sections guide you through the process of modernizing the sample Java application
+        - code [ref=e2115]: asset-manager
+        - text: to Azure using GitHub Copilot modernization.
+      - heading "Install GitHub Copilot modernization" [level=3] [ref=e2116]
+      - paragraph [ref=e2117]:
+        - text: In VSCode, open the Extensions view from the Activity Bar, search for the
+        - code [ref=e2118]: GitHub Copilot modernization
+        - text: extension in the marketplace. Click the Install button for the extension. After installation completes, you should see a notification in the bottom-right corner of VSCode confirming success.
+      - heading "Assess Your Java Application" [level=3] [ref=e2119]
+      - paragraph [ref=e2120]:
+        - text: The first step is to assess the sample Java application
+        - code [ref=e2121]: asset-manager
+        - text: . The assessment provides insights into the application's readiness for migration to Azure.
+      - list [ref=e2122]:
+        - listitem [ref=e2123]:
+          - paragraph [ref=e2124]:
+            - text: Open VS Code with all the prerequisites installed for the asset manager by changing the directory to the
+            - code [ref=e2125]: asset-manager
+            - text: directory and running
+            - code [ref=e2126]: code .
+            - text: in that directory.
+        - listitem [ref=e2127]:
+          - paragraph [ref=e2128]:
+            - text: In the Activity sidebar, open the
+            - strong [ref=e2129]: GitHub Copilot modernization
+            - text: extension pane.
+        - listitem [ref=e2130]:
+          - paragraph [ref=e2131]:
+            - text: In the
+            - strong [ref=e2132]: QUICKSTART
+            - text: section, click
+            - strong [ref=e2133]: Start Assessment
+            - text: to trigger the app assessment.
+        - listitem [ref=e2134]:
+          - paragraph [ref=e2135]:
+            - text: Select
+            - strong [ref=e2136]: Recommanded Assessment
+            - text: and then on popup keep the values default selected as
+            - strong [ref=e2137]: Java Upgrade
+            - text: and
+            - strong [ref=e2138]: Cloud readiness
+            - text: and click
+            - strong [ref=e2139]: ok
+            - text: .
+          - paragraph [ref=e2140]:
+            - img "Trigger Assessment" [ref=e2141]
+        - listitem [ref=e2142]:
+          - paragraph [ref=e2143]: The Assessment should have been started, Wait for the assessment to be completed. This step could take several minutes.
+        - listitem [ref=e2144]:
+          - paragraph [ref=e2145]:
+            - text: Upon completion, an
+            - strong [ref=e2146]: Assessment Report
+            - text: tab opens. This report provides a categorized view of cloud readiness issues and recommended solutions. Select the
+            - strong [ref=e2147]: Issues
+            - text: tab to view proposed solutions and proceed with migration steps.
+      - heading "Upgrade Runtime & Frameworks" [level=3] [ref=e2148]
+      - list [ref=e2149]:
+        - listitem [ref=e2150]:
+          - paragraph [ref=e2151]:
+            - text: In the
+            - strong [ref=e2152]: Java Upgrade
+            - text: table at the bottom of the
+            - strong [ref=e2153]: Issues
+            - text: tab, click the
+            - strong [ref=e2154]: Run Task
+            - text: button of the first entry
+            - strong [ref=e2155]: Java Version Upgrade
+            - text: .
+          - paragraph [ref=e2156]:
+            - img "Java Upgrade" [ref=e2157]
+        - listitem [ref=e2158]:
+          - paragraph [ref=e2159]:
+            - text: After clicking the
+            - strong [ref=e2160]: Run Task
+            - text: button, the Copilot Chat panel will open with Agent Mode. The agent will check out a new branch and start upgrading the JDK version and Spring/Spring Boot framework. Click
+            - strong [ref=e2161]: Allow
+            - text: for any requests from the agent. The Agent will ask you few confirmation while running the task, you can allow that in the session.
+      - blockquote [ref=e2162]:
+        - paragraph [ref=e2163]:
+          - text: "Note: The upgrading tool also supports upgrading to JDK 25 (the latest LTS version). To do this, click on the generated chat message, edit the target Java version to 25, and then click"
+          - strong [ref=e2164]: Send
+          - text: to apply the change.
+      - list [ref=e2165]:
+        - listitem [ref=e2166]: The upgrade can take upto 5 minutes, in the meantime you can explore more on the dashboard and once it gets completed you can continue with next task.
+      - heading "Migrate to Azure Database for PostgreSQL Flexible Server using Predefined Tasks" [level=3] [ref=e2167]
+      - paragraph [ref=e2168]:
+        - text: Then you can migrate the sample Java application
+        - code [ref=e2169]: asset-manager
+        - text: to Azure.
+      - list [ref=e2170]:
+        - listitem [ref=e2171]:
+          - paragraph [ref=e2172]:
+            - text: For this workshop, select
+            - strong [ref=e2173]: Migrate to Azure Database for PostgreSQL (Spring)
+            - text: in the Solution list, then click
+            - strong [ref=e2174]: Run Task
+            - text: .
+          - paragraph [ref=e2175]:
+            - img "Confirm Solution" [ref=e2176]
+        - listitem [ref=e2177]:
+          - paragraph [ref=e2178]:
+            - text: After clicking the
+            - strong [ref=e2179]: Run Task
+            - text: button in the Assessment Report, the Copilot Chat panel will open with Agent Mode.
+        - listitem [ref=e2180]:
+          - paragraph [ref=e2181]:
+            - text: The Copilot Agent will analyze the project, generate and open
+            - strong [ref=e2182]: plan.md
+            - text: and
+            - strong [ref=e2183]: progress.md
+            - text: ", then automatically proceed with the migration process."
+        - listitem [ref=e2184]:
+          - paragraph [ref=e2185]:
+            - text: The agent checks the version control system status and checks out a new branch for migration, then performs the code changes. Click
+            - strong [ref=e2186]: Allow
+            - text: for any tool call requests from the agent.
+        - listitem [ref=e2187]:
+          - paragraph [ref=e2188]:
+            - text: When the code migration is complete, the agent will automatically run a
+            - strong [ref=e2189]: validation and fix iteration loop
+            - text: "which includes:"
+          - list [ref=e2190]:
+            - listitem [ref=e2191]:
+              - strong [ref=e2192]: CVE Validation
+              - text: ": Detects Common Vulnerabilities and Exposures in current dependencies and fixes them."
+            - listitem [ref=e2193]:
+              - strong [ref=e2194]: Build Validation
+              - text: ": Attempts to resolve any build errors."
+            - listitem [ref=e2195]:
+              - strong [ref=e2196]: Consistency Validation
+              - text: ": Analyzes the code for functional consistency."
+            - listitem [ref=e2197]:
+              - strong [ref=e2198]: Test Validation
+              - text: ": Runs unit tests and automatically fixes any failures."
+            - listitem [ref=e2199]:
+              - strong [ref=e2200]: Completeness Validation
+              - text: ": Catches migration items missed in the initial code migration and fixes them."
+        - listitem [ref=e2201]:
+          - paragraph [ref=e2202]:
+            - text: After all validations complete, the agent generates a
+            - strong [ref=e2203]: summary.md
+            - text: as the final step.
+        - listitem [ref=e2204]:
+          - paragraph [ref=e2205]:
+            - text: Review the proposed code changes and click
+            - strong [ref=e2206]: Keep
+            - text: to apply them.
+      - heading "Migrate to Azure Blob Storage using Predefined Tasks" [level=3] [ref=e2207]
+      - list [ref=e2208]:
+        - listitem [ref=e2209]:
+          - text: Click the
+          - strong [ref=e2210]: Run Task
+          - text: in the Assessment Report, on the right of the row
+          - code [ref=e2211]: Storage Migration (AWS S3)
+          - text: "-"
+          - code [ref=e2212]: Migrate from AWS S3 to Azure Blob Storage
+          - text: .
+        - listitem [ref=e2213]: The following steps are the same as the above PostgreSQL server migration.
+      - heading "Migrate to Azure Service Bus using Predefined Tasks" [level=3] [ref=e2214]
+      - list [ref=e2215]:
+        - listitem [ref=e2216]:
+          - text: Click the
+          - strong [ref=e2217]: Run Task
+          - text: in the Assessment Report, on the right of the row
+          - code [ref=e2218]: Messaging Service Migration (Spring AMQP RabbitMQ)
+          - text: "-"
+          - code [ref=e2219]: Migrate from RabbitMQ(AMQP) to Azure Service Bus
+          - text: .
+        - listitem [ref=e2220]: The following steps are the same as the above PostgreSQL server migration.
+      - heading "Expose health endpoints using Custom Skills" [level=3] [ref=e2221]
+      - paragraph [ref=e2222]: In this section, you will use custom skills to expose health endpoints for your applications instead of writing code yourself. The following steps demonstrate how to create a custom skill with references and proper prompts.
+      - blockquote [ref=e2223]:
+        - paragraph [ref=e2224]: "Note: Custom skills (My Skills) are not supported for the IntelliJ IDEA plugin. If you are using IntelliJ IDEA, you can skip this section."
+      - list [ref=e2225]:
+        - listitem [ref=e2226]:
+          - paragraph [ref=e2227]:
+            - text: In the Activity sidebar, open the
+            - strong [ref=e2228]: GitHub Copilot modernization
+            - text: extension pane. Hover over the
+            - strong [ref=e2229]: TASKS
+            - text: section, and then select
+            - strong [ref=e2230]: Create a Custom Skill
+            - text: .
+          - paragraph [ref=e2231]:
+            - img "Create Custom Skill" [ref=e2232]
+        - listitem [ref=e2233]:
+          - paragraph [ref=e2234]:
+            - text: A
+            - strong [ref=e2235]: Create a Skill
+            - text: "form opens with the following fields. Fill them in as shown below:"
+          - list [ref=e2236]:
+            - listitem [ref=e2237]:
+              - strong [ref=e2238]: Skill Name
+              - text: ":"
+              - code [ref=e2239]: expose-health-endpoint
+            - listitem [ref=e2240]:
+              - strong [ref=e2241]: Skill Description
+              - text: ":"
+              - code [ref=e2242]: This skill helps add Spring Boot Actuator health endpoints for Azure Container Apps deployment readiness.
+            - listitem [ref=e2243]:
+              - strong [ref=e2244]: Skill Content
+              - text: ":"
+              - code [ref=e2245]: You are a Spring Boot developer assistant, follow the Spring Boot Actuator documentation to add basic health endpoints for Azure Container Apps deployment.
+        - listitem [ref=e2246]:
+          - paragraph [ref=e2247]:
+            - text: Click
+            - strong [ref=e2248]: Add Resources
+            - text: "to add the Spring Boot Actuator official documentation as a resource. Paste the following link:"
+            - code [ref=e2249]: https://docs.spring.io/spring-boot/reference/actuator/endpoints.html
+            - text: .
+          - paragraph [ref=e2250]:
+            - img "Create a Skill form" [ref=e2251]
+        - listitem [ref=e2252]:
+          - paragraph [ref=e2253]:
+            - text: Click
+            - strong [ref=e2254]: Save
+            - text: to create the skill. Your custom skill now appears in the
+            - strong [ref=e2255]: TASKS
+            - text: ">"
+            - strong [ref=e2256]: My Skills
+            - text: section.
+        - listitem [ref=e2257]:
+          - paragraph [ref=e2258]:
+            - text: Click
+            - strong [ref=e2259]: Run
+            - text: to execute it.
+        - listitem [ref=e2260]:
+          - paragraph [ref=e2261]:
+            - text: The Copilot chat window opens in Agent Mode and automatically generates the migration plan, checks out a new branch, performs code changes, and runs the validation and fix iteration loop. Click
+            - strong [ref=e2262]: Allow
+            - text: for any tool call requests from the agent.
+        - listitem [ref=e2263]:
+          - paragraph [ref=e2264]:
+            - text: Review the proposed code changes and click
+            - strong [ref=e2265]: Keep
+            - text: to apply them.
+      - heading "Containerize Applications" [level=3] [ref=e2266]
+      - paragraph [ref=e2267]:
+        - text: Now that you have successfully migrated your Java application to use Azure services, the next step is to prepare it for cloud deployment by containerizing both the web and worker modules. In this section, you will use
+        - strong [ref=e2268]: Containerization Tasks
+        - text: to containerize your migrated applications.
+      - blockquote [ref=e2269]:
+        - paragraph [ref=e2270]:
+          - text: "Note: If you encounter any issues with the previous migration step, you can directly proceed with the containerization step using the"
+          - link "workshop/expected" [ref=e2271] [cursor=pointer]:
+            - /url: https://github.com/Azure-Samples/java-migration-copilot-samples/tree/workshop/expected/asset-manager
+          - text: branch.
+      - list [ref=e2272]:
+        - listitem [ref=e2273]:
+          - paragraph [ref=e2274]:
+            - text: In the Activity sidebar, open the
+            - strong [ref=e2275]: GitHub Copilot modernization
+            - text: extension pane. In the
+            - strong [ref=e2276]: TASKS
+            - text: section, expand
+            - strong [ref=e2277]: Common Tasks
+            - text: ">"
+            - strong [ref=e2278]: Containerize Tasks
+            - text: and click the run button for
+            - strong [ref=e2279]: Containerize Application
+            - text: .
+          - paragraph [ref=e2280]:
+            - img "Run Containerize Application task" [ref=e2281]
+        - listitem [ref=e2282]:
+          - paragraph [ref=e2283]:
+            - text: A predefined prompt will be populated in the Copilot Chat panel with Agent Mode. Copilot Agent will start to analyze the workspace and to create a
+            - strong [ref=e2284]: containerization-plan.copiotmd
+            - text: with the containerization plan.
+          - paragraph [ref=e2285]:
+            - img "Containerization prompt and plan" [ref=e2286]
+        - listitem [ref=e2287]:
+          - paragraph [ref=e2288]:
+            - text: View the plan and collaborate with Copilot Agent as it follows the
+            - strong [ref=e2289]: Execution Steps
+            - text: in the plan by clicking
+            - strong [ref=e2290]: Continue
+            - text: /
+            - strong [ref=e2291]: Allow
+            - text: in pop-up chat notifications to run commands. Some of the execution steps leverage agentic tools of
+            - strong [ref=e2292]: Container Assist
+            - text: .
+        - listitem [ref=e2293]:
+          - paragraph [ref=e2294]:
+            - text: Copilot Agent will help generate Dockerfile, build Docker images and fix build errors if there are any. Click
+            - strong [ref=e2295]: Keep
+            - text: to apply the generated code.
+      - heading "Deploy to Azure" [level=3] [ref=e2296]
+      - paragraph [ref=e2297]:
+        - text: At this point, you have successfully migrated the sample Java application
+        - code [ref=e2298]: asset-manager
+        - text: to Azure Database for PostgreSQL (Spring), Azure Blob Storage, and Azure Service Bus, and exposed health endpoints via Spring Boot Actuator. Now, you can start the deployment to Azure.
+      - blockquote [ref=e2299]:
+        - paragraph [ref=e2300]:
+          - text: "Note: If you encounter any issues with the previous migration step, you can directly proceed with the deployment step using the"
+          - link "workshop/expected" [ref=e2301] [cursor=pointer]:
+            - /url: https://github.com/Azure-Samples/java-migration-copilot-samples/tree/workshop/expected/asset-manager
+          - text: branch.
+      - list [ref=e2302]:
+        - listitem [ref=e2303]:
+          - paragraph [ref=e2304]:
+            - text: In the Activity sidebar, open the
+            - strong [ref=e2305]: GitHub Copilot modernization
+            - text: extension pane. In the
+            - strong [ref=e2306]: TASKS
+            - text: section, expand
+            - strong [ref=e2307]: Common Tasks
+            - text: ">"
+            - strong [ref=e2308]: Deployment Tasks
+            - text: . Click the run button for
+            - strong [ref=e2309]: Provision Infrastructure and Deploy to Azure
+            - text: .
+          - paragraph [ref=e2310]:
+            - img "Run Deployment task" [ref=e2311]
+        - listitem [ref=e2312]:
+          - paragraph [ref=e2313]:
+            - text: A predefined prompt will be populated in the Copilot Chat panel with Agent Mode. The default hosting Azure service is Azure Container Apps.To change the hosting service to
+            - strong [ref=e2314]: Azure Kubernetes Service
+            - text: (AKS), click on the prompt in the Copilot Chat panel and edit the last sentence of the prompt to
+            - strong [ref=e2315]: "Hosting service: AKS"
+            - text: .
+          - paragraph [ref=e2316]:
+            - img "Deployment prompt" [ref=e2317]
+        - listitem [ref=e2318]:
+          - paragraph [ref=e2319]:
+            - text: Click **
+            - strong [ref=e2320]: Continue
+            - text: /
+            - strong [ref=e2321]: Allow
+            - text: if pop-up notifications to let Copilot Agent analyze the project and create a deployment plan in
+            - strong [ref=e2322]: plan.copilotmd
+            - text: with Azure resources architecture, recommended Azure resources for project and security configurations, and execution steps for deployment.
+        - listitem [ref=e2323]:
+          - paragraph [ref=e2324]:
+            - text: View the architecture diagram, resource configurations, and execution steps in the plan. Click
+            - strong [ref=e2325]: Keep
+            - text: to save the plan and type in
+            - strong [ref=e2326]: Execute the plan
+            - text: to start the deployment.
+          - paragraph [ref=e2327]:
+            - img "Deployment execute" [ref=e2328]
+        - listitem [ref=e2329]:
+          - paragraph [ref=e2330]:
+            - text: When prompted, click
+            - strong [ref=e2331]: Continue
+            - text: /
+            - strong [ref=e2332]: Allow
+            - text: in chat notifications or type
+            - strong [ref=e2333]: "y"
+            - text: /
+            - strong [ref=e2334]: "yes"
+            - text: in terminal as Copilot Agent follows the plan and leverages agent tools to create and run provisioning and deployment scripts, fix potential errors, and finish the deployment. You can also check the deployment status in
+            - strong [ref=e2335]: progress.copilotmd
+            - text: .
+            - strong [ref=e2336]: DO NOT interrupt
+            - text: when provisioning or deployment scripts are running.
+          - paragraph [ref=e2337]:
+            - img "Deployment progress" [ref=e2338]
+      - blockquote [ref=e2339]:
+        - paragraph [ref=e2340]:
+          - text: "Note: If you encounter any issues with the deployment step, you can refer to the expected Copilot-generated deployment scripts in"
+          - code [ref=e2341]: /.azure
+          - text: folder of the
+          - link "workshop/deployment-expected" [ref=e2342] [cursor=pointer]:
+            - /url: https://github.com/Azure-Samples/java-migration-copilot-samples/tree/workshop/deployment-expected/asset-manager
+          - text: branch to compare your deployment scripts and troubleshoot the problems.
+      - heading "Clean up" [level=4] [ref=e2343]
+      - paragraph [ref=e2344]: When no longer needed, you can delete all related resources using the following scripts.
+      - paragraph [ref=e2345]: "Windows:"
+      - code [ref=e2347]: scripts\cleanup-azure-resources.cmd -ResourceGroupName <your resource group name>
+      - paragraph [ref=e2348]: "Linux:"
+      - code [ref=e2350]: scripts/cleanup-azure-resources.sh -ResourceGroupName <your resource group name>
+      - paragraph [ref=e2351]:
+        - text: If you deploy the app using GitHub Codespaces, delete the Codespaces environment by navigating to your forked repository in GitHub and selecting
+        - strong [ref=e2352]: Code
+        - text: ">"
+        - strong [ref=e2353]: Codespaces
+        - text: ">"
+        - strong [ref=e2354]: Delete
+        - text: .
+    - list "Pagination" [ref=e272]:
+      - listitem [ref=e273]:
+        - generic "Previous page" [ref=e1237] [cursor=pointer]:
+          - text: « Previous
+          - generic [ref=e1238]: page
+      - listitem [ref=e276]:
+        - generic [ref=e1239] [cursor=pointer]:
+          - generic [ref=e1240]: page
+          - text: "1"
+      - listitem [ref=e278]:
+        - generic [ref=e1470] [cursor=pointer]:
+          - generic [ref=e1471]: page
+          - text: "2"
+      - listitem [ref=e281]:
+        - generic [ref=e1472] [cursor=pointer]:
+          - generic [ref=e1473]: page
+          - text: "3"
+      - listitem [ref=e284]:
+        - generic [ref=e2355] [cursor=pointer]:
+          - generic [ref=e2356]: page
+          - text: "4"
+      - listitem [ref=e287]:
+        - generic [ref=e2357]: You're on page
+        - text: "5"
+      - listitem [ref=e290]:
+        - generic [ref=e1478] [cursor=pointer]:
+          - generic [ref=e1479]: page
+          - text: "6"
+      - listitem [ref=e293]:
+        - generic [ref=e2071] [cursor=pointer]:
+          - generic [ref=e2072]: page
+          - text: "7"
+      - listitem [ref=e296]:
+        - generic "Next page" [ref=e2073] [cursor=pointer]:
+          - text: Next
+          - generic [ref=e2074]: page
+          - text: »
+    - button "scroll Top" [ref=e299] [cursor=pointer]:
+      - generic [ref=e300]: 
+  - contentinfo "footer" [ref=e302]:
+    - generic [ref=e303]:
+      - generic [ref=e305]:
+        - paragraph [ref=e306]: 2026 © Spektra Systems LLC. All Rights Reserved
+        - paragraph [ref=e307]:
+          - link "open in new tab PRIVACY POLICY" [ref=e308] [cursor=pointer]:
+            - /url: https://cloudlabs.ai/privacy-policy/
+            - text: Privacy Policy
+          - generic [ref=e309]: "|"
+        - paragraph [ref=e310]:
+          - link "open in new tab TERMS OF SERVICE" [ref=e311] [cursor=pointer]:
+            - /url: https://cloudlabs.ai/terms-of-use/
+            - text: Terms of Service
+      - generic [ref=e313]:
+        - paragraph [ref=e314]:
+          - text: Powered by
+          - link "open in new tab CloudLabs" [ref=e315] [cursor=pointer]:
+            - /url: https://cloudlabs.ai/
+            - text: CloudLabs
+          - text: "|"
+        - paragraph [ref=e316]:
+          - generic [ref=e317]: 
+          - text: "Sales Email:"
+          - link "Mail to info@cloudlabs.ai" [ref=e318] [cursor=pointer]:
+            - /url: mailto:info@cloudlabs.ai
+            - text: info@cloudlabs.ai
+          - text: "|"
+        - paragraph [ref=e319]:
+          - generic [ref=e320]: 
+          - generic [ref=e321]: "Support Email:"
+          - link "Mail to cloudlabs-support@spektrasystems.com" [ref=e322] [cursor=pointer]:
+            - /url: mailto:cloudlabs-support@spektrasystems.com
+            - text: cloudlabs-support@spektrasystems.com
