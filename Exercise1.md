@@ -114,7 +114,7 @@
 
     ![](./images/15-7-25-l1-9.png)    
    
-15. **Connect to AzureMigrateAppliance** 창에서 **Connect**를 클릭한 다음, 관리자 비밀번호: **<inject key="SmartHotel Admin Password" />** 를 사용하여 VM에 로그인하십시오. (참고: 로그인 화면에서 로컬 키보드 레이아웃이 사용될 수 있으므로, '눈 모양' 아이콘을 클릭하여 비밀번호가 올바르게 입력되었는지 확인하십시오.)
+15. **Connect to AzureMigrateAppliance** 창에서 **Connect**를 클릭한 다음, 관리자 비밀번호: **demo!pass123** 를 사용하여 VM에 로그인하십시오. (참고: 로그인 화면에서 로컬 키보드 레이아웃이 사용될 수 있으므로, '눈 모양' 아이콘을 클릭하여 비밀번호가 올바르게 입력되었는지 확인하십시오.)
  
     ![](./images/15-7-25-l1-10.png)
 
